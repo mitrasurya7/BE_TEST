@@ -4,6 +4,7 @@ const { bucket } = require("../middlewares/multer");
 const sharp = require("sharp");
 
 class Controller {
+  // For insert data User
   static async newUser(req, res, next) {
     try {
       const buffer = req.file.buffer;
@@ -73,6 +74,8 @@ class Controller {
       next(error);
     }
   }
+
+  // For update data User
   static async updateUser(req, res, next) {
     try {
       const { id } = req.params;
@@ -145,6 +148,7 @@ class Controller {
       res.status(500).json({ message: "internal server error" });
     }
   }
+  // for get user All
   static async getAllUser(req, res, next) {
     try {
       const allUser = await prisma.User.findMany();
@@ -153,6 +157,8 @@ class Controller {
       next(error);
     }
   }
+
+  // for get user by ID
   static async getUserId(req, res, next) {
     try {
       const { id } = req.params;
