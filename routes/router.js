@@ -3,6 +3,9 @@ const { multerUpload } = require("../middlewares/multer");
 
 const router = require("express").Router();
 
+router.get("/", (req, res) => {
+  res.send("halo bos");
+});
 router.post("/input", multerUpload.single("image"), Controller.newUser);
 router.put("/update/:id", multerUpload.single("image"), Controller.updateUser);
 router.get("/users", Controller.getAllUser);
