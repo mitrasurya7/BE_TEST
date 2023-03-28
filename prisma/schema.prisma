@@ -17,7 +17,7 @@ model User {
   name      String
   date      DateTime
   usia      Int
-  mobile    Int
+  mobile    String
   education String
   image     String
   city      String

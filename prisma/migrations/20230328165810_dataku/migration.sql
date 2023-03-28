@@ -6,7 +6,7 @@ CREATE TABLE "User" (
     "name" TEXT NOT NULL,
     "date" TIMESTAMP(3) NOT NULL,
     "usia" INTEGER NOT NULL,
-    "mobile" INTEGER NOT NULL,
+    "mobile" TEXT NOT NULL,
     "education" TEXT NOT NULL,
     "image" TEXT NOT NULL,
     "city" TEXT NOT NULL,
